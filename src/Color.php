@@ -23,10 +23,25 @@ class Color extends Field
     {
         return $this->withMeta(['pickerType' => $type]);
     }
+    
+    public function disableAlpha(bool $disable = true)
+    {
+        return $this->withMeta(['disableAlpha' => $disable]);
+    }
 
     public function palette(array $palette)
     {
         return $this->withMeta(['palette' => $palette]);
+    }
+    
+    public function presetColors(array $presetColors)
+    {
+        return $this->withMeta(['presetColors' => $presetColors]);
+    }
+    
+    public function withSwatches(array $swatches)
+    {
+        return $this->withMeta(['swatches' => $swatches]);
     }
 
     public function chrome()
@@ -72,5 +87,10 @@ class Color extends Field
     public function plain()
     {
         return $this->pickerType('plain');
+    }
+
+    public function twitter()
+    {
+        return $this->pickerType('twitter');
     }
 }

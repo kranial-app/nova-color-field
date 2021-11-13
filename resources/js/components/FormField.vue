@@ -16,6 +16,9 @@
               :class="errorClasses"
               :palette="palette"
               :value="value"
+              :disableAlpha="disableAlpha"
+              :presetColors="presetColors"
+              :swatches="swatches"
               @input="handleChange">
             </component>
             <p v-if="hasError" class="my-2 text-danger">
@@ -68,6 +71,24 @@ export default {
          */
         palette() {
             return this.field.palette || undefined;
+        },
+        /**
+         * Determines if the alpha slider should be displayed.
+         */
+        disableAlpha() {
+            return this.field.disableAlpha || undefined;
+        },
+        /**
+         * Sets the swatches.
+         */
+        swatches() {
+            return this.field.swatches || undefined;
+        },
+        /**
+         * Sets the preset colors.
+         */
+        presetColors() {
+            return this.field.presetColors || undefined;
         },
         /**
          * Determines the placeholder.
