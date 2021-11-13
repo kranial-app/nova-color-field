@@ -6,7 +6,8 @@ import {
     Photoshop,
     Sketch,
     Slider,
-    Swatches
+    Swatches,
+    Twitter
 } from "vue-color";
 
 Nova.booting((Vue, router) => {
@@ -18,6 +19,7 @@ Nova.booting((Vue, router) => {
     Vue.component("sketch-picker", Sketch);
     Vue.component("slider-picker", Slider);
     Vue.component("swatches-picker", Swatches);
+    Vue.component("twitter-picker", Twitter);
     Vue.component("index-color", require("./components/IndexField"));
     Vue.component("detail-color", require("./components/DetailField"));
     Vue.component("form-color", require("./components/FormField"));
